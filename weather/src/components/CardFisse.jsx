@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Card, Container, Row, Col } from 'react-bootstrap';
 import '../App.css'
 
-const città = ['Roma', 'Milano', 'Napoli', 'Torino', 'Firenze','Los Angeles'];
+const città = ['Firenze', 'Roma', 'Honolulu', 'Copenaghen', 'Londra','Los Angeles'];
 
 function FixedCard() {
   const [weatherData, setWeatherData] = useState({});
