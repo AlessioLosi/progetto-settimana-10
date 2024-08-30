@@ -36,6 +36,10 @@
     transform: rotate(360deg);
   }
 }
+.bgsky{
+  background-image: url('https://cdn.pixabay.com/photo/2016/06/22/16/22/clouds-1473311_1280.jpg');
+
+}
 .testo{
   text-align: center;
 }

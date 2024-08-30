@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Container, Row, Col } from 'react-bootstrap';
+import '../App.css'
 
 const città = ['Roma', 'Milano', 'Napoli', 'Torino', 'Firenze','Los Angeles'];
 
@@ -36,16 +37,16 @@ function FixedCard() {
         {città.map((city) => (
           <Col key={city} md={4} className="mb-4 text-center">
             {weatherData[city] ? (
-              <Card className="mb-3 border-info" style={{ backgroundColor: 'white' }}>
+              <Card className="mb-3 border-info p-2 bgsky" >
                 <Card.Body>
-                  <Card.Title>Meteo a {weatherData[city].name}</Card.Title>
+                  <Card.Title>Weather in {weatherData[city].name}</Card.Title>
                   <Card.Subtitle className="mb-2 ">
-                    <h4>Temperatura: {weatherData[city].main.temp}°C</h4>
+                    <h4>Temperature: {weatherData[city].main.temp}°C</h4>
                   </Card.Subtitle>
                   <Card.Text>
-                    <h4>Condizioni: {weatherData[city].weather[0].description}</h4>
-                    <h4>Vento: {weatherData[city].wind.speed} m/s</h4>
-                    <h4>Umidità: {weatherData[city].main.humidity}%</h4>
+                    <h4>Conditions: {weatherData[city].weather[0].description}</h4>
+                    <h4>Wind Speed: {weatherData[city].wind.speed} m/s</h4>
+                    <h4>Umidity: {weatherData[city].main.humidity}%</h4>
                   </Card.Text>
                 </Card.Body>
               </Card>

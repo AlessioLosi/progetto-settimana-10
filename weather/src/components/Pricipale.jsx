@@ -7,8 +7,8 @@ function Home() {
     <Container >
         <Row >
             <Col className='testo'>
-            <h1 className='text-center'>Benvenuto !</h1>
-      <h2>Controlla il meteo nella tua città</h2></Col></Row>
+            <h1 className='text-center text-info'>Benvenuto !</h1>
+      <h2 className='text-info'>Controlla il meteo nella tua città</h2></Col></Row>
     </Container>
   );
 }

@@ -7,7 +7,7 @@ function WeatherCard({ data, city }) {
   }
 
   return (
-    <Card className="border-info mb-3 p-5" >
+    <Card className="border-info mb-3 p-5 bgsky" >
       <Card.Body>
         <Card.Title>Weather in {data.name}</Card.Title>
         <Card.Subtitle className="mb-2 ">
@@ -15,7 +15,7 @@ function WeatherCard({ data, city }) {
         </Card.Subtitle>
         <Card.Text>
           <h4>Conditions: {data.weather[0].description}</h4>
-          <h4>Wind: {data.wind.speed} m/s</h4>
+          <h4>Wind Speed: {data.wind.speed} m/s</h4>
           <h4>Umidity: {data.main.humidity}%</h4>
         </Card.Text>
       </Card.Body>
