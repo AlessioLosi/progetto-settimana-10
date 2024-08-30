@@ -18,7 +18,7 @@ function CitySearch({ onCitySearch }) {
         value={city}
         onChange={(e) => setCity(e.target.value)}
       />
-      <button type="submit">Cerca</button>
+      <button type="submit" variant='flat'>Cerca</button>
     </form>
   );
 }

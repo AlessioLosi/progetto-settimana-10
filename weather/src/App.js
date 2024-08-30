@@ -3,6 +3,7 @@ import Home from './components/Pricipale';
 import CitySearch from './components/InputSearch';
 import WeatherCard from './components/WeatherCard';
 import {infoWeatherData} from './components/FetchingInfo';
+import ColorSchemesExample from './components/Navbar';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className="App">
       <>
+      <ColorSchemesExample></ColorSchemesExample>
       <Home></Home>
       <CitySearch onCitySearch={handleCitySearch} />
       {weatherData && <WeatherCard data={weatherData} city={city} />}</>
