@@ -4,6 +4,7 @@ import CitySearch from './components/InputSearch';
 import WeatherCard from './components/WeatherCard';
 import {infoWeatherData} from './components/FetchingInfo';
 import ColorSchemesExample from './components/Navbar';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 function App() {
