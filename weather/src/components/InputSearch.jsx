@@ -7,7 +7,6 @@ function CitySearch({ onCitySearch }) {
     e.preventDefault();
     if (city.trim() !== '') {
       onCitySearch(city);
-      setCity('');
     }
   };
 

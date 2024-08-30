@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import CitySearch from './components/InputSearch';
-import WeatherCard from './components/WeatherCard';
-import {infoWeatherData} from './components/FetchingInfo';
+import CitySearch from '../components/CitySearch';
+import { infoWeatherData } from './FetchingInfo';
+import WeatherCard from './WeatherCard';
 
-function App() {
+function Home() {
   const [weatherData, setWeatherData] = useState(null);
   const [city, setCity] = useState('');
 
@@ -14,12 +14,13 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <h1>Weather App</h1>
+    <div>
+      <h1>Benvenuto !</h1>
+      <h2>Controlla il meteo nella tua città</h2>
       <CitySearch onCitySearch={handleCitySearch} />
-      {weatherData && <WeatherCard data={weatherData} city={city} />}
+      {weatherData && <WeatherInfo data={weatherData.current} city={city} />}
     </div>
   );
 }
 
-export default App;
+export default Home;
