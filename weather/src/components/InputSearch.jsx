@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Container, Row, Col, Form} from 'react-bootstrap';
+import Button from 'react-bootstrap/Button'
 
 function CitySearch({ onCitySearch }) {
   const [city, setCity] = useState('');
@@ -11,15 +13,25 @@ function CitySearch({ onCitySearch }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Inserisci una città"
-        value={city}
-        onChange={(e) => setCity(e.target.value)}
-      />
-      <button type="submit" variant='flat'>Cerca</button>
-    </form>
+    <Container className="my-4">
+    <Row className="justify-content-center">
+      <Col md={6}>
+        <Form onSubmit={handleSubmit} className="text-center">
+          <Form.Group controlId="formCitySearch">
+            <Form.Control
+              type="text"
+              placeholder="Inserisci una città"
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+            />
+          </Form.Group>
+          <Button type="submit" variant="outline-info" className="mt-2">
+            Cerca
+          </Button>
+        </Form>
+      </Col>
+    </Row>
+  </Container>
   );
 }
 

@@ -40,6 +40,9 @@
   text-align: center;
 }
 .sole{
-  width: 10px;
-  height:10px;
+  width: 50px;
+  height:auto;
+}
+.cloudybg{
+  background-image: url("https://services.meteored.com/img/article/come-fanno-le-nuvole-a-galleggiare-nel-cielo-1700995932796_1280.jpg");
 }

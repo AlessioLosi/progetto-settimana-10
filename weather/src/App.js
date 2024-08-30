@@ -4,7 +4,9 @@ import CitySearch from './components/InputSearch';
 import WeatherCard from './components/WeatherCard';
 import {infoWeatherData} from './components/FetchingInfo';
 import ColorSchemesExample from './components/Navbar';
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import CardFisse from './components/CardFisse';
+import Footercustom from './components/Footer';
 
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
       <Home></Home>
       <CitySearch onCitySearch={handleCitySearch} />
       {weatherData && <WeatherCard data={weatherData} city={city} />}</>
+      <CardFisse></CardFisse>
+      <Footercustom></Footercustom>
     </div>
   );
 }
