@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import CitySearch from '../components/CitySearch';
+import CitySearch from './InputSearch';
 import { infoWeatherData } from './FetchingInfo';
 import WeatherCard from './WeatherCard';
 
@@ -14,11 +14,9 @@ function Home() {
   };
 
   return (
-    <div>
+    <div className='d-flex justify-content-center'>
       <h1>Benvenuto !</h1>
       <h2>Controlla il meteo nella tua città</h2>
-      <CitySearch onCitySearch={handleCitySearch} />
-      {weatherData && <WeatherInfo data={weatherData.current} city={city} />}
     </div>
   );
 }

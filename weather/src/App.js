@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import Home from './components/Pricipale';
 import CitySearch from './components/InputSearch';
 import WeatherCard from './components/WeatherCard';
 import {infoWeatherData} from './components/FetchingInfo';
-import Home from './components/Pricipale';
+
 
 function App() {
   const [weatherData, setWeatherData] = useState(null);
@@ -16,9 +17,10 @@ function App() {
 
   return (
     <div className="App">
+      <>
       <Home></Home>
       <CitySearch onCitySearch={handleCitySearch} />
-      {weatherData && <WeatherCard data={weatherData} city={city} />}
+      {weatherData && <WeatherCard data={weatherData} city={city} />}</>
     </div>
   );
 }
